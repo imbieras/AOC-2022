@@ -9,6 +9,10 @@ import (
 	"strings"
 )
 
+var (
+	inputFile = util.ReadFile("./input.txt")
+)
+
 func main() {
 	var part int
 	flag.IntVar(&part, "part", 1, "part 1 or 2")
@@ -16,11 +20,11 @@ func main() {
 	fmt.Println("Running part", part)
 
 	if part == 1 {
-		ans := part1(util.ReadFile("./input.txt"))
+		ans := part1(inputFile)
 		util.CopyToClipboard(fmt.Sprintf("%v", ans))
 		fmt.Println("Output:", ans)
 	} else {
-		ans := part2(util.ReadFile("./input.txt"))
+		ans := part2(inputFile)
 		util.CopyToClipboard(fmt.Sprintf("%v", ans))
 		fmt.Println("Output:", ans)
 	}

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/alexchao26/advent-of-code-go/util"
 	"testing"
 )
 
@@ -11,7 +10,7 @@ func Test_part1(t *testing.T) {
 		input string
 		want  int
 	}{
-		{"actual", util.ReadFile("input.txt"), 66487},
+		{"actual", inputFile, 66487},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -28,7 +27,7 @@ func Test_part2(t *testing.T) {
 		input string
 		want  int
 	}{
-		{"actual", util.ReadFile("input.txt"), 197301},
+		{"actual", inputFile, 197301},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
