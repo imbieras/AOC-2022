@@ -66,9 +66,9 @@ func priority(r rune) int {
 	return val - 96
 }
 
-func chunkSlice(slice []string, size int) [][]string {
+func chunkSlice[T any](slice []T, size int) [][]T {
 	length := len(slice)
-	chunks := make([][]string, 0)
+	chunks := make([][]T, 0)
 	for i := 0; i < length; i += size {
 		end := i + size
 		if end > length {
