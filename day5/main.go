@@ -36,7 +36,9 @@ func part1(input string) string {
 		fromStack := stacks[from]
 		toStack := stacks[to]
 		crates, fromStack := PopN(fromStack, count)
-		Reverse(crates)
+		if count > 1 {
+			Reverse(crates)
+		}
 		toStack = append(toStack, crates...)
 		stacks[from] = fromStack
 		stacks[to] = toStack

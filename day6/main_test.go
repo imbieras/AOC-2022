@@ -8,9 +8,9 @@ func Test_part1(t *testing.T) {
 	tests := []struct {
 		name  string
 		input string
-		want  string
+		want  int
 	}{
-		{"actual", inputFile, "NTWZZWHFV"},
+		{"actual", inputFile, 1779},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
@@ -25,9 +25,9 @@ func Test_part2(t *testing.T) {
 	tests := []struct {
 		name  string
 		input string
-		want  string
+		want  int
 	}{
-		{"actual", inputFile, "BRZGFVBTJ"},
+		{"actual", inputFile, 2635},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
